@@ -24,7 +24,7 @@
     </update>
 
     <insert id="addUser" parameterType="map" keyProperty="id">
-        INSERT into tbuser (uId, userName, password, uName, age, sex) values (#{uid},#{userName},#{password},#{uName},#{age},#{sex})
+        INSERT into tbuser (uId, userName, password, relName, age, sex,) values (#{uid},#{userName},#{password},#{relName},#{age},#{sex})
     </insert>
 
     <insert id="addLoginStatus" parameterType="map" keyProperty="id">
@@ -36,7 +36,7 @@
     </delete>
 
     <update id="upUser" parameterType="map" >
-        update tbUser set password=#{password},uid =#{uid},userName=#{userName},uName=#{uName},age=#{age},sex=#{sex} where userName = #{userName}
+        update tbUser set password=#{password},uid =#{uid},userName=#{userName},relName=#{relName},age=#{age},sex=#{sex} where userName = #{userName}
     </update>
 
     <select id="queryLoginStatus" parameterType="map" resultType="loginStatus">

@@ -1,6 +1,7 @@
 package com.wzz.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @ClassName User
@@ -13,10 +14,15 @@ public class User implements Serializable {
     private String uid;    //uid
     private String userName;   //用户名
     private String password;    //密码
-    private String uName;      //姓名
+    private String relName;      //姓名
     private Integer age;    //年龄
     private Integer sex;    //性别
     private Integer score;  //征信分
+    private Date   bir;     //出生日期
+    private String place;   //出生省份
+    private String city;    //出生城市
+    private double tel;     //电话号码
+    private boolean token;  //登录类型
 
     public int getId() {
         return id;
@@ -59,11 +65,11 @@ public class User implements Serializable {
     }
 
     public String getuName() {
-        return uName;
+        return relName;
     }
 
     public void setuName(String uName) {
-        this.uName = uName;
+        this.relName = uName;
     }
 
     public Integer getAge() {
@@ -82,6 +88,54 @@ public class User implements Serializable {
         this.sex = sex;
     }
 
+    public String getRelName() {
+        return relName;
+    }
+
+    public void setRelName(String relName) {
+        this.relName = relName;
+    }
+
+    public Date getBir() {
+        return bir;
+    }
+
+    public void setBir(Date bir) {
+        this.bir = bir;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public double getTel() {
+        return tel;
+    }
+
+    public void setTel(double tel) {
+        this.tel = tel;
+    }
+
+    public boolean isToken() {
+        return token;
+    }
+
+    public void setToken(boolean token) {
+        this.token = token;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -89,11 +143,15 @@ public class User implements Serializable {
                 ", uid='" + uid + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", uName='" + uName + '\'' +
+                ", relName='" + relName + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
                 ", score=" + score +
+                ", bir=" + bir +
+                ", place='" + place + '\'' +
+                ", city='" + city + '\'' +
+                ", tel=" + tel +
+                ", token=" + token +
                 '}';
     }
-
 }

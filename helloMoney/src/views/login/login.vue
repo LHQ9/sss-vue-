@@ -2,7 +2,7 @@
   <div class="login-container">
     <div v-if= "flag" >
       <div style="margin-top:3%;margin-left:6%">
-        <span class="title"><h1>图书统一管理系统</h1></span>
+        <span class="title"><h1>网上报名考试系统</h1></span>
     </div>
       <el-form
         ref="loginForm"
